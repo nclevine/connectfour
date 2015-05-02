@@ -21,7 +21,7 @@ body{
 
 h1{
   margin: 0;
-  font-size: 3em;
+  font-size: 4em;
   font-family: $title;
   color: #002601;
 }
@@ -51,7 +51,7 @@ h1{
   position: absolute;
   left: $cell-size;
   top: 2 * $cell-size;
-  width: $cell-size * 1.5;
+  width: $cell-size * 1.7;
   height: $cell-size * 2.5;
 }
 
@@ -68,7 +68,7 @@ h1{
   background: $board-backgroundz;
   border: $borderz-width $borderz;
   font-family: $boardfont;
-  font-size: 1em;
+  font-size: 1.2em;
   color: white;
 }
 
