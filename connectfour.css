@@ -1,41 +1,48 @@
 body {
   text-align: center;
-  font-family: "Quicksand", sans-serif; }
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  background: url(forest.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 h1 {
+  margin: 0;
+  font-size: 3em;
   font-family: "Fontdiner Swanky", cursive;
-  margin: 0; }
+  color: #002601; }
 
 .gamecell {
   float: left;
   margin: 5px;
-  width: 90px;
-  height: 90px;
-  background: white;
+  width: 75px;
+  height: 75px;
+  background: #61300D;
   border: 2px solid #381C08;
-  border-radius: 45px;
-  transition: background-color 0.5s; }
+  border-radius: 37.5px;
+  transition: background 0.5s; }
 
 #currentcolor {
-  margin: 45px auto;
-  width: 90px;
-  height: 90px;
+  margin: 37.5px auto;
+  width: 75px;
+  height: 75px;
   border: 2px solid #381C08;
-  border-radius: 45px;
+  border-radius: 37.5px;
   background: red;
-  transition: background-color 0.5s; }
+  transition: background 0.5s; }
 
 #controls {
   position: absolute;
-  left: 50px;
-  top: 200px;
-  width: 135px;
-  height: 225px; }
+  left: 75px;
+  top: 150px;
+  width: 112.5px;
+  height: 187.5px; }
 
 #gameboard {
   margin: 0 auto;
-  width: 728px;
-  height: 624px;
+  width: 623px;
+  height: 534px;
   padding: 5px;
   background: url(woodgrain.jpg);
   border: 2px solid #381C08; }

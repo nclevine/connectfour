@@ -5,14 +5,14 @@ var gameCells = document.querySelectorAll('.gamecell');
 
 function newGame(){
   for (var i = 0; i < gameCells.length; i++) {
-    gameCells[i].style.background = '';
+    gameCells[i].style.background = '#61300D';
     gameCells[i].setAttribute('data-filled', 'false');
   };
   gameover = false;
   currentPlayer = 'red';
-  currentcolor.style.backgroundColor = currentPlayer;
+  currentcolor.style.background = currentPlayer;
   winner = '';
-  result.innerText = '';
+  playertitle.innerText = 'Current Player:';
 }
 
 restart.addEventListener('click', newGame);
@@ -35,7 +35,7 @@ function claimCell(cell){
   var thisColumn = cell.getAttribute('data-column');
   var cellToFill = findLowestUnoccupied(thisColumn);
   if(cellToFill){
-    cellToFill.style.backgroundColor = currentPlayer;
+    cellToFill.style.background = currentPlayer;
     cellToFill.setAttribute('data-filled', currentPlayer);
     return cellToFill;
   };
@@ -47,7 +47,7 @@ function changePlayer(){
   } else{
     currentPlayer = 'red';
   };
-  currentcolor.style.backgroundColor = currentPlayer;
+  currentcolor.style.background = currentPlayer;
 }
 
 function checkFilledBoard(){
@@ -58,7 +58,7 @@ function checkFilledBoard(){
     };
   };
   if (occupiedCells === gameCells.length && winner === '') {
-    result.innerText = 'everyone loses';
+    playertitle.innerText = 'everyone loses';
     gameover = true;
   };
 }
@@ -117,7 +117,7 @@ function checkForWinner(cell){
     winner = currentPlayer;
   };
   if(winner !== ''){
-    result.innerText = winner + 'wins!';
+    playertitle.innerText = winner.toUpperCase() + ' WINS!';
     gameover = true;
   }
 }
@@ -154,14 +154,14 @@ for (var g = 0; g < gameCells.length; g++) {
   gameCells[g].addEventListener('mouseenter', function(){
     var bottomCell = findLowestUnoccupied(this.getAttribute('data-column'));
     if(bottomCell.getAttribute('data-filled') === 'false'){
-      bottomCell.style.backgroundColor = currentPlayer;
+      bottomCell.style.background = currentPlayer;
     };
   });
 
   gameCells[g].addEventListener('mouseleave', function(){
     var bottomCell = findLowestUnoccupied(this.getAttribute('data-column'));
     if(bottomCell.getAttribute('data-filled') === 'false'){
-      bottomCell.style.backgroundColor = '';
+      bottomCell.style.background = '#61300D';
     };
   });
 

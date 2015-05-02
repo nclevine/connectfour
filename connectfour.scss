@@ -1,20 +1,29 @@
+$backgroundz: url(forest.jpg);
 $board-backgroundz: url(woodgrain.jpg);
 $boardfont: 'Quicksand', sans-serif;
 $title: 'Fontdiner Swanky', cursive;
-$cell-size: 90px;
+$cell-size: 75px;
 $cell-margin: 5px;
-$cell-backgrounds: white;
+$darkbrown: #61300D;
+$cell-backgrounds: $darkbrown;
 $borderz: solid #381C08;
 $borderz-width: 2px;
 
 body{
   text-align: center;
   font-family: $boardfont;
+  color: white;
+  background: $backgroundz;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 h1{
-  font-family: $title;
   margin: 0;
+  font-size: 3em;
+  font-family: $title;
+  color: #002601;
 }
 
 .gamecell{
@@ -25,7 +34,7 @@ h1{
   background: $cell-backgrounds;
   border: $borderz-width $borderz;
   border-radius: $cell-size / 2;
-  transition: background-color 0.5s;
+  transition: background 0.5s;
 }
 
 #currentcolor{
@@ -35,13 +44,13 @@ h1{
   border: $borderz-width $borderz;
   border-radius: $cell-size / 2;
   background: red;
-  transition: background-color 0.5s;
+  transition: background 0.5s;
 }
 
 #controls{
   position: absolute;
-  left: 50px;
-  top: 200px;
+  left: $cell-size;
+  top: 2 * $cell-size;
   width: $cell-size * 1.5;
   height: $cell-size * 2.5;
 }
