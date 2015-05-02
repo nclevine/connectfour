@@ -1,0 +1,53 @@
+body {
+  text-align: center;
+  font-family: "Quicksand", sans-serif; }
+
+h1 {
+  font-family: "Fontdiner Swanky", cursive;
+  margin: 0; }
+
+.gamecell {
+  float: left;
+  margin: 5px;
+  width: 90px;
+  height: 90px;
+  background: white;
+  border: 2px solid #381C08;
+  border-radius: 45px;
+  transition: background-color 0.5s; }
+
+#currentcolor {
+  margin: 45px auto;
+  width: 90px;
+  height: 90px;
+  border: 2px solid #381C08;
+  border-radius: 45px;
+  background: red;
+  transition: background-color 0.5s; }
+
+#controls {
+  position: absolute;
+  left: 50px;
+  top: 200px;
+  width: 135px;
+  height: 225px; }
+
+#gameboard {
+  margin: 0 auto;
+  width: 728px;
+  height: 624px;
+  padding: 5px;
+  background: url(woodgrain.jpg);
+  border: 2px solid #381C08; }
+
+#restart {
+  background: url(woodgrain.jpg);
+  border: 2px solid #381C08;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  color: white; }
+
+.clear {
+  clear: both; }
+
+/*# sourceMappingURL=connectfour.css.map */

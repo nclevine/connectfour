@@ -1,0 +1,68 @@
+$board-backgroundz: url(woodgrain.jpg);
+$boardfont: 'Quicksand', sans-serif;
+$title: 'Fontdiner Swanky', cursive;
+$cell-size: 90px;
+$cell-margin: 5px;
+$cell-backgrounds: white;
+$borderz: solid #381C08;
+$borderz-width: 2px;
+
+body{
+  text-align: center;
+  font-family: $boardfont;
+}
+
+h1{
+  font-family: $title;
+  margin: 0;
+}
+
+.gamecell{
+  float: left;
+  margin: $cell-margin;
+  width: $cell-size;
+  height: $cell-size;
+  background: $cell-backgrounds;
+  border: $borderz-width $borderz;
+  border-radius: $cell-size / 2;
+  transition: background-color 0.5s;
+}
+
+#currentcolor{
+  margin: $cell-size/2 auto;
+  width: $cell-size;
+  height: $cell-size;
+  border: $borderz-width $borderz;
+  border-radius: $cell-size / 2;
+  background: red;
+  transition: background-color 0.5s;
+}
+
+#controls{
+  position: absolute;
+  left: 50px;
+  top: 200px;
+  width: $cell-size * 1.5;
+  height: $cell-size * 2.5;
+}
+
+#gameboard{
+  margin: 0 auto;
+  width: ($cell-size + 2 * $borderz-width + 2 * $cell-margin) * 7;
+  height: ($cell-size + 2 * $borderz-width + 2 * $cell-margin) * 6;
+  padding: $cell-margin;
+  background: $board-backgroundz;
+  border: $borderz-width $borderz;
+}
+
+#restart{
+  background: $board-backgroundz;
+  border: $borderz-width $borderz;
+  font-family: $boardfont;
+  font-size: 1em;
+  color: white;
+}
+
+.clear{
+  clear: both;
+}
