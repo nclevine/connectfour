@@ -153,14 +153,14 @@ function checkForChainBackwards(cellOccupant, neighborArray){
 for (var g = 0; g < gameCells.length; g++) {
   gameCells[g].addEventListener('mouseenter', function(){
     var bottomCell = findLowestUnoccupied(this.getAttribute('data-column'));
-    if(bottomCell.getAttribute('data-filled') === 'false'){
+    if(bottomCell.getAttribute('data-filled') === 'false' && gameover === false){
       bottomCell.style.background = currentPlayer;
     };
   });
 
   gameCells[g].addEventListener('mouseleave', function(){
     var bottomCell = findLowestUnoccupied(this.getAttribute('data-column'));
-    if(bottomCell.getAttribute('data-filled') === 'false'){
+    if(bottomCell.getAttribute('data-filled') === 'false' && gameover === false){
       bottomCell.style.background = '#61300D';
     };
   });
@@ -170,7 +170,9 @@ for (var g = 0; g < gameCells.length; g++) {
       var filledCell = claimCell(this);
       checkForWinner(filledCell);
       checkFilledBoard();
-      changePlayer();
+      if(gameover === false){
+        changePlayer();
+      };
     };
   });
 };
